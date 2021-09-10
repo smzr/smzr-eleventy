@@ -1,0 +1,33 @@
+.page-content {
+  line-height: 1.7;
+
+  h2 {
+    font-size: get-size('700');
+  }
+
+  h3 {
+    font-size: get-size('600');
+  }
+
+  ol,
+  ul {
+    padding-inline-start: get-size('800');
+  }
+
+  li + li {
+    margin-top: get-size('300');
+  }
+
+  // Add a greater flow space for heading elements so
+  // they appear more like article sections
+  h2,
+  h3 {
+    --flow-space: #{get-size('800')};
+  }
+
+  // Add tighter flow for elements that follow a heading
+  h2 + *,
+  h3 + * {
+    --flow-space: #{get-size('300')};
+  }
+}

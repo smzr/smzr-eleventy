@@ -1,0 +1,31 @@
+.snippets-list {
+  --flow-space: #{get-size('600')};
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+  li {
+    --flow-space: #{get-size('300')};
+  }
+  a {
+    @extend .radius;
+    font-size: get-size('500');
+    padding: 0.8rem;
+    background-color: get-color('light-glare');
+    border: 2px solid get-color('dark-glare');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    &:hover, &:focus {
+      svg {
+        display: initial;
+      }
+    }
+  }
+  svg {
+    font-size: 1.3em;
+    @media (hover: hover) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="wrapper">
+  <article class="flow">
+    <header class="article-head flow">
+      <h1 class="section-header">Projects</h1>
+      <div class="article-head__intro flow">
+        <p>These are my side projects which are mostly made for fun or to learn technologies. The code can be be found on <a href="">GitHub</a> and I have some smaller demos on <a href="">CodePen</a>.</p>
+      </div>
+    </header>
+    <hr class="color-dark">
+    {% include "partials/project-list.html" %}
+  </article>
+</div>
+{% endblock %}

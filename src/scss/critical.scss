@@ -1,0 +1,77 @@
+@import 'config';
+@import '../../node_modules/gorko/gorko.scss';
+@import 'reset';
+
+// Global styles start
+* {
+  scrollbar-color: get-color('primary-shade') #c2c5cc;
+}
+
+body {
+  line-height: 1.5;
+}
+
+main {
+  flex: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: get-size('900');
+}
+
+h2 {
+  font-size: get-size('600');
+}
+
+h3 {
+  font-size: get-size('500');
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-color: get-color('quaternary');
+}
+
+hr {
+  border: none;
+  border-top: 4px dotted currentColor;
+  margin: 0;
+}
+
+:focus {
+	outline: get-color('primary') dashed 2px;
+	outline-offset: .25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+.section-header {
+  --flow-space: #{get-size('900')};
+}
+
+// Utilities
+@import 'utilities/wrapper';
+@import 'utilities/flow';
+@import 'utilities/radius';
+@import 'utilities/site-wrap';
+@import 'utilities/visually-hidden';
+
+// Blocks
+@import 'blocks/site-head';
+@import 'blocks/site-foot';
+@import 'blocks/article-head';
+@import 'blocks/button';
+@import 'blocks/skip-link';
+@import 'blocks/nav';
+@import 'blocks/projects-list';
+@import 'blocks/snippets-list';
+@import 'blocks/contact-form';
+@import 'blocks/page-content';

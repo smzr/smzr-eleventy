@@ -1,0 +1,22 @@
+.site-head {
+  padding: 0.8rem 0;
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    @include media-query('md') {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
+  &__brand {
+    color: currentColor;
+    svg {
+      max-width: 100%;
+      height: 3rem;
+    }
+  }
+  &__nav {
+    padding: 1rem 0;
+  }
+}

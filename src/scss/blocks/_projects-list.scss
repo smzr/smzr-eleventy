@@ -1,0 +1,31 @@
+.projects-list {
+  --flow-space: #{get-size('600')};
+  margin-bottom: 0;
+	display: grid;
+	list-style: none;
+	padding: 0;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  article > * + * {
+    margin-top: get-size('300');
+  }
+  li a {
+    @extend .radius;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: var(--color-light-glare);
+    border: 2px solid get-color('dark-glare');
+    display: grid;
+    grid-template-columns: 24px auto;
+    gap: 0.8rem;
+    &:hover {
+      h3 {
+        color: get-color('quaternary-shade');
+        text-decoration: underline;
+      }
+      svg {
+        color: get-color('quaternary-shade');
+      }
+    }
+  }
+}

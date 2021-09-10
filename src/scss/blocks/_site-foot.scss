@@ -1,0 +1,19 @@
+.site-foot {
+  border-top: 0.5rem solid currentColor;
+  text-align: center;
+  padding: get-size('600') 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: get-size('700');
+  a {
+    line-height: 1;
+    height: 32px;
+  }
+  a:hover {
+    color: get-color('secondary');
+  }
+}

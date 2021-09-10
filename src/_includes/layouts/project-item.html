@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %} 
+
+{% block content %}
+  <div class="wrapper">
+    <article>
+      <header class="article-head flow">
+        <h1 class="section-header">{{ title }}</h1>
+        <div class="article-head__intro flow">
+          <p>{{ summary }}</p>
+        </div>
+        <img src="{{ image }}" alt="{{ imageAlt }}" class="article-head__image" />
+      </header>
+      <hr class="color-dark">
+      <div class="page-content flow flow-space-700 gap-top-700">
+        {{ content | safe }}
+      </div>
+    </article>
+  </div>
+{% endblock %}

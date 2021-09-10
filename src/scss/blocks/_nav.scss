@@ -1,0 +1,49 @@
+.nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  @include media-query('md') {
+    gap: 1.2rem;
+  }
+  li {
+    margin: 0.25rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    position: relative;
+    padding: .5rem 0;
+    
+    &[data-state='active'],
+    &[aria-current='page'] {
+      color: get-color('quaternary-shade');
+      &::before {
+        content: "";
+        height: 8px;
+        width: 8px;
+        border-radius: 2px;
+        position: absolute;
+        background-color: currentColor;
+        top: -.5rem;
+        animation: bounce 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, 0) rotate(360deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}

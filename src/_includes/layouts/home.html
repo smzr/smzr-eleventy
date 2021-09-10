@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="wrapper gap-top-900">
+  <article class="flow">
+    <h2 class="section-header">Recent Projects</h2>
+    <hr class="color-dark">
+    {% include "partials/project-list.html" %}
+    <h2 class="section-header">Recent Snippets</h2>
+    <hr class="color-dark">
+    <ol class="snippets-list flow">
+      <li>
+        <a href="">Identicon Generator <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
+      </li>
+      <li>
+        <a href="">Game of Life <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
+      </li>
+      <li>
+        <a href="">Identicon Generator <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
+      </li>
+      <li>
+        <a href="">Game of Life <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
+      </li>
+    </ol>
+  </article>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="wrapper">
+  <article class="flow">
+      <header class="article-head flow">
+        <h1 class="section-header">Contact me</h1>
+        <div class="article-head__intro flow">
+          <p>All enquiries are welcome - if you want to talk about a project, need some help, or just want to say hi.</p>
+          <p>Alternatively, send me an email at <a href="">sammy@smzr.co.uk</a>.</p>
+        </div>
+      </header>
+      <hr class="color-dark">
+      <form class="contact-form" method="POST" name="contact">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="contact-form__fields">
+          <div class="contact-form__field">
+            <label for="name">Name *</label>
+            <input id="name" type="text" name="name" required="true">
+          </div>
+          <div class="contact-form__field">
+            <label for="email">Email *</label>
+            <input id="email" type="email" name="email" required="true">
+          </div>
+          <div class="contact-form__field">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required="true"></textarea>
+          </div>
+        </div>
+        <button class="button gap-top-600" type="submit">Send Message</button>
+      </form>
+    </article>
+</div>
+{% endblock %}
