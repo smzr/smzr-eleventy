@@ -5,6 +5,8 @@ displayOrder: 2
 featured: true
 image: '/images/projects/playlist-converter.png'
 imageAlt: 'Screenshot of the Playlist Converter project'
+url: 'https://playlist-converter.herokuapp.com/'
+codeUrl: 'https://github.com/smzr/playlist-converter'
 ---
 ## Initial idea
 I made Playlist Converter for my A-Level computing project. The idea was that I wanted to be able to take every song from a Spotify playlist and put them into an identical playlist on YouTube. This was the first big project I had done using API integration. I wanted the application to be easy to use and avoid too many steps.

@@ -5,6 +5,8 @@ displayOrder: 1
 featured: true
 image: '/images/projects/identicon-generator.png'
 imageAlt: 'Screenshot of the Identicon Generator project'
+url: 'https://smzr.github.io/identicon-generator/'
+codeUrl: 'https://github.com/smzr/identicon-generator'
 ---
 ## Initial idea
 I liked the way that GitHub generated unique profile pictures for each user, so I decided to recreate the Identicon generator using a Javascript canvas.

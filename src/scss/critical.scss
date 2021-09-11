@@ -36,6 +36,12 @@ h3 {
 a:not([class]) {
   color: currentColor;
   text-decoration-color: get-color('quaternary');
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  &:hover {
+    color: get-color('quaternary');
+    text-decoration-color: get-color('dark');
+  }
 }
 
 hr {
@@ -45,7 +51,7 @@ hr {
 }
 
 :focus {
-	outline: get-color('primary') dashed 2px;
+	outline: get-color('secondary') solid 1px;
 	outline-offset: .25rem;
 }
 

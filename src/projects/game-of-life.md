@@ -5,6 +5,8 @@ displayOrder: 3
 featured: true
 image: '/images/projects/game-of-life.png'
 imageAlt: 'Screenshot of the Game of Life project'
+url: 'https://smzr.github.io/game-of-life/'
+codeUrl: 'https://github.com/smzr/game-of-life'
 ---
 ## Initial idea
 Conway's Game of Life is a cellular automaton. The evolution is determined by the initial state and requires no further input. You can interact with the game by starting with a clear canvas and clicking to change the state of each cell.

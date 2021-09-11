@@ -2,12 +2,12 @@
   <div class="wrapper">
     <div class="site-foot__inner flow">
       <div class="socials">
-        <a href=""><span class="iconify-inline" data-icon="mdi:email-outline"></span></a>
-        <a href=""><span class="iconify-inline" data-icon="mdi:github"></span></a>
-        <a href=""><span class="iconify-inline" data-icon="fa-brands:codepen"></span></a>
-        <a href=""><span class="iconify-inline" data-icon="fa-brands:linkedin-in"></span></a>
+        <a href="mailto:sammy@smzr.co.uk"><span class="iconify-inline" data-icon="mdi:email-outline"></span></a>
+        <a href="https://github.com/smzr"><span class="iconify-inline" data-icon="mdi:github"></span></a>
+        <a href="https://codepen.io/smzr"><span class="iconify-inline" data-icon="fa-brands:codepen"></span></a>
+        <a href="https://www.linkedin.com/in/sammy-mckay-b687b4212/"><span class="iconify-inline" data-icon="fa-brands:linkedin-in"></span></a>
       </div>
-      <p>smzr © <script> document.write(new Date().getFullYear()); </script></p>
+      <p>smzr © {{ helpers.currentYear() }}</p>
     </div>
   </div>
 </footer>

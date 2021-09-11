@@ -1,13 +1,14 @@
 <ol class="projects-list">
   {% for item in collections.projects %}
   <li>
-    <a href="{{item.url}}">
-      <span class="iconify" data-icon="line-md:hash-small" data-width="24" data-height="24"></span>
-      <article>
-        <h3>{{item.data.title}}</h3>
-        <p>{{item.data.summary}}</p>
-      </article>
-    </a>
+    <span class="iconify" data-icon="line-md:hash-small" data-width="24" data-height="24"></span>
+    <article>
+      <div class="projects-list__title">{{item.data.title}}</div>
+      <p class="projects-list__summary gap-top-300">{{item.data.summary}}</p>
+      <div class="gap-top-500">
+        <a href="{{item.data.url}}">Website</a> / <a href="{{item.data.codeUrl}}">Code</a>
+      </div>
+    </article>
   </li>
   {% endfor %}
 </ol>

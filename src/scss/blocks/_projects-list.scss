@@ -6,10 +6,12 @@
 	padding: 0;
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  article > * + * {
-    margin-top: get-size('300');
+  &__title {
+    line-height: 1.2;
+    font-size: get-size('500');
+    font-weight: 700;
   }
-  li a {
+  li {
     @extend .radius;
     text-decoration: none;
     padding: 1rem;
@@ -18,14 +20,5 @@
     display: grid;
     grid-template-columns: 24px auto;
     gap: 0.8rem;
-    &:hover {
-      h3 {
-        color: get-color('quaternary-shade');
-        text-decoration: underline;
-      }
-      svg {
-        color: get-color('quaternary-shade');
-      }
-    }
   }
 }
