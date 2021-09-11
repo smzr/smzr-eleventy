@@ -21,7 +21,7 @@
 
     {# Include Iconify SVG framework  #}
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js" defer></script>
-    <link rel="stylesheet" href="https://code.iconify.design/css/line-md.css" defer>
+    <link rel="stylesheet" media="print" href="https://code.iconify.design/css/line-md.css" onload="this.media='all'" />
 
     {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
