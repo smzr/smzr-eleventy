@@ -12,10 +12,10 @@
     font-weight: 700;
   }
   li {
-    @extend .radius;
+    border-radius: 0.5rem;
     text-decoration: none;
     padding: 1rem;
-    background-color: var(--color-light-glare);
+    background-color: get-color('light-glare');
     border: 2px solid get-color('dark-glare');
     display: grid;
     grid-template-columns: 24px auto;

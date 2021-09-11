@@ -7,12 +7,12 @@ const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = config => {
-  // Only minify HTML if we are in production because it slows builds _right_ down
+  // Only minify HTML if we are in production
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
   }
 
-  // Returns work items, sorted by display order
+  // Returns project items, sorted by display order
   config.addCollection('projects', collection => {
     return sortByDisplayOrder(collection.getFilteredByGlob('./src/projects/*.md'));
   });

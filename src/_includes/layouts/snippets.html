@@ -1,27 +1,18 @@
-{% extends "layouts/base.html" %} {% block content %}
+{% extends "layouts/base.html" %} 
+
+{% set pageCriticalStyles = ['css/snippets.css'] %}
+
+{% block content %}
 <div class="wrapper">
   <article class="flow">
     <header class="article-head flow">
-      <h1 class="section-header">Snippets</h1>
+      <h1 class="section-header">{{title}}</h1>
       <div class="article-head__intro flow">
-        <p>These are random demos or snippets which are too small to go on the <a href="/projects">Projects</a> page. Most of these can be found on my <a href="https://codepen.io/smzr">CodePen</a>.</p>
+        {{ content | safe }}
       </div>
     </header>
     <hr class="color-dark">
-    <ol class="snippets-list flow">
-      <li>
-        <a href="">Identicon Generator <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
-      </li>
-      <li>
-        <a href="">Game of Life <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
-      </li>
-      <li>
-        <a href="">Identicon Generator <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
-      </li>
-      <li>
-        <a href="">Game of Life <span class="iconify" data-icon="line-md:arrow-small-right"></span></span></a>
-      </li>
-    </ol>
+    {% include "partials/snippet-list.html" %}
   </article>
 </div>
 {% endblock %}

@@ -12,6 +12,7 @@
   a {
     line-height: 1;
     height: 32px;
+    color: get-color('secondary-glare');
   }
   a:hover {
     color: get-color('secondary');

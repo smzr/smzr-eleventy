@@ -1,0 +1,7 @@
+<ol class="snippets-list flow">
+  {% for item in snippets.items %}
+    <li>
+      <a href="{{item.url}}">{{item.text}} <span class="iconify" data-icon="line-md:arrow-small-right"></span></a>
+    </li>
+  {% endfor %}
+</ol>

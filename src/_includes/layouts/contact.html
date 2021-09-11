@@ -1,11 +1,14 @@
-{% extends "layouts/base.html" %} {% block content %}
+{% extends "layouts/base.html" %} 
+
+{% set pageCriticalStyles = ['css/contact.css'] %}
+
+{% block content %}
 <div class="wrapper">
   <article class="flow">
       <header class="article-head flow">
-        <h1 class="section-header">Contact me</h1>
+        <h1 class="section-header">{{title}}</h1>
         <div class="article-head__intro flow">
-          <p>All enquiries are welcome - if you want to talk about a project, need some help, or just want to say hi.</p>
-          <p>Alternatively, send me an email at <a href="">sammy@smzr.co.uk</a>.</p>
+          {{ content | safe }}
         </div>
       </header>
       <hr class="color-dark">

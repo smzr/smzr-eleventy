@@ -1,0 +1,6 @@
+$generate-utility-classes: false;
+@import 'config';
+@import '../../node_modules/gorko/gorko.scss';
+
+// Import blocks
+@import 'blocks/contact-form';
