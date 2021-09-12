@@ -14,7 +14,8 @@ const criticalStyles = [
   'contact.scss',
   'snippets.scss',
   'projects.scss',
-  'page.scss'
+  'page.scss',
+  'line-md.scss'
 ];
 
 // Takes the arguments passed by `dest` and determines where the output file goes

@@ -19,10 +19,6 @@
 
     <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
 
-    {# Include Iconify SVG framework  #}
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js" defer></script>
-    <link rel="stylesheet" media="print" href="https://code.iconify.design/css/line-md.css" onload="this.media='all'" />
-
     {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
       {% for item in pageStylesheets %}
@@ -34,6 +30,7 @@
     <div class="site-wrap">
       {% include "partials/site-head.html" %}
       <main tabindex="-1" id="main-content">
+      <span class="iconify" data-icon="@custom:md:test"></span>
         {% block content %}{% endblock %}
       </main>
       {% include "partials/site-foot.html" %}
