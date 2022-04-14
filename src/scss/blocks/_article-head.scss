@@ -4,7 +4,8 @@
     max-width: 60ch;
   }
   &__image {
-    width: 50%;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16/9;
     margin-top: get-size('900') ;
   }
