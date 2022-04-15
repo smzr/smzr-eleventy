@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %} 
 
-{% set pageCriticalStyles = ['css/projects.css','css/snippets.css','css/line-md.css'] %}
+{% set pageCriticalStyles = ['css/blog.css','css/projects.css','css/snippets.css','css/line-md.css'] %}
 
 {% block content %}
 <div class="wrapper gap-top-900">
@@ -11,6 +11,9 @@
     <h2 class="section-header">Recent Snippets</h2>
     <hr class="color-dark">
     {% include "partials/snippet-list.html" %}
+    <h2 class="section-header">Recent Posts</h2>
+    <hr class="color-dark">
+    {% include "partials/blog-list.html" %}
   </article>
 </div>
 {% endblock %}

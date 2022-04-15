@@ -1,5 +1,8 @@
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
+// Import filters
+const { DateTime } = require("luxon");
+
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
@@ -12,9 +15,37 @@ module.exports = config => {
     config.addTransform('htmlmin', htmlMinTransform);
   }
 
+  // Filters
+  config.addFilter("shortDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toFormat('MMM dd');
+  });
+  config.addFilter("fullDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toFormat('MMMM dd, yyyy');
+  });
+  config.addFilter("w3Date", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toISO();
+  });
+
   // Returns project items, sorted by display order
   config.addCollection('projects', collection => {
     return sortByDisplayOrder(collection.getFilteredByGlob('./src/projects/*.md'));
+  });
+
+  config.addCollection("postsByYear", collection => {
+    const posts = collection.getFilteredByGlob('./src/blog/*.md').reverse();
+    const years = posts.map(post => post.date.getFullYear());
+    const uniqueYears = [...new Set(years)];
+  
+    const postsByYear = uniqueYears.reduce((prev, year) => {
+      const filteredPosts = posts.filter(post => post.date.getFullYear() === year);
+  
+      return [
+        ...prev,
+        [year, filteredPosts]
+      ]
+    }, []);
+  
+    return postsByYear;
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

@@ -49,8 +49,16 @@ a:not([class]) {
 
 hr {
   border: none;
-  border-top: 4px dotted currentColor;
+  border-top: 4px dashed currentColor;
   margin: 0;
+}
+
+hr:not([class]) {
+  border: none;
+  border-top: 1px solid get-color('tertiary-shade');
+  transform: translateY(-1px);
+  margin: clamp(1.37rem,1.21rem + .8vw,1.78rem) 0!important;
+  max-width: 55rem;
 }
 
 :focus {

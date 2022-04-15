@@ -7,13 +7,9 @@
     <article>
       <header class="article-head flow">
         <h1 class="section-header">{{title}}</h1>
-        <div class="article-head__intro flow">
-          <p>{{summary}}</p>
-        </div>
-        <img src="{{image}}" alt="{{imageAlt}}" class="article-head__image" />
+        <time class="color-dark-glare" datetime="{{ page.date | w3Date }}">{{ page.date | fullDate }}</time>
       </header>
-      <hr class="color-dark">
-      <div class="page-content flow flow-space-700 gap-top-700">
+      <div class="page-content flow">
         {{ content | safe }}
       </div>
     </article>

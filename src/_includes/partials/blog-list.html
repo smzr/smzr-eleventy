@@ -1,0 +1,10 @@
+{% for year, yearPosts in collections.postsByYear %}
+  <h2 class="blog-year">{{ year }}</h2>
+  <ul class="blog-list flow">
+    {% for post in yearPosts | reverse %}
+    <li>
+      <a href="{{post.url}}">{{post.data.title}} <time datetime="{{ post.date | w3Date }}">{{ post.date | shortDate }}</time></a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

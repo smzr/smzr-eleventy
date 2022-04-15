@@ -1,0 +1,22 @@
+.blog-year {
+  --flow-space: #{get-size('800')};
+  color: #{get-color('secondary')};
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+  > li {
+    > a {
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      font-size: #{get-size('500')};
+      time {
+        font-size: #{get-size('400')};
+        white-space: nowrap;
+        color: #{get-color('dark-glare')};
+      }
+    }
+  }
+}
