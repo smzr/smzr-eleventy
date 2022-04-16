@@ -8,12 +8,28 @@ public_folder: "/images"
 collections:
   # Blog posts
   - name: "blog"
-    label: "Post"
+    label: "Blog"
     folder: "src/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  # Projects
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Display Order", name: "displayOrder", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean" }
+      - { label: "Image", name: "image", widget: "file" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Repository URL", name: "codeUrl", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
