@@ -16,6 +16,9 @@ module.exports = config => {
     config.addTransform('htmlmin', htmlMinTransform);
   }
 
+  // Passthroughs
+  config.addPassthroughCopy('src/admin/config.yml');
+
   // Plugins
   config.addPlugin(syntaxHighlight);
 
