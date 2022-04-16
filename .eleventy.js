@@ -1,7 +1,8 @@
-const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
-
-// Import filters
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
+
+// Utils 
+const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -14,6 +15,9 @@ module.exports = config => {
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
   }
+
+  // Plugins
+  config.addPlugin(syntaxHighlight);
 
   // Filters
   config.addFilter("shortDate", (dateObj) => {

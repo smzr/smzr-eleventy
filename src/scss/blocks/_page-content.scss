@@ -21,7 +21,8 @@
   // Add a greater flow space for heading elements so
   // they appear more like article sections
   h2,
-  h3 {
+  h3,
+  pre {
     --flow-space: #{get-size('800')};
   }
 
