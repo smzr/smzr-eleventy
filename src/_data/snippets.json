@@ -2,7 +2,13 @@
   "items": [
     {
       "text": "Big Flex Menu",
-      "url": "https://codepen.io/smzr/pen/mdObpZb"
+      "url": "https://codepen.io/smzr/pen/mdObpZb",
+      "external": true
+    },
+    {
+      "url": "https://codepen.io/smzr/pen/NWaLZmX",
+      "text": "JQuery Controlled date picker ",
+      "external": true
     }
   ]
 }
