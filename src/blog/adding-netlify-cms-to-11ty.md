@@ -9,6 +9,7 @@ Towards the end of 2021 I rebuilt my website using the static site generator [11
 I thought it would be nice to add a simple CMS to the project so I can add content through visual editors. I was stuck between using [Sanity](https://www.sanity.io/) or [Netlify CMS](https://www.netlifycms.org/), but after a brief look at the setup of each, Netlify CMS seemed much easier and lightweight.
 
 ## Restrict access using Netlify's Identity service
+Netlify Identity service allows you to manage and authenticate users on your site or app, without requiring them to be users of Netlify or any other service. We will use this to restrict access to the CMS of your website.
 
 ### Enable Identity service
 
