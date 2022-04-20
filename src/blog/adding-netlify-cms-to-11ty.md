@@ -172,6 +172,6 @@ Now head to `yourwebsite.com/admin` and login again. You should now see an inter
 
 ---
 
-Your Netlify CMS setup can be improved further through adding [Custom Previews](https://www.netlifycms.org/docs/customization/) to match your website styling or you could add [editorial workflows](https://www.netlifycms.org/docs/configuration-options/#publish-mode), which adds an interface for drafting, reviewing and approving posts before they go live on a website.
+Your Netlify CMS setup can be improved further through adding [Custom Previews](https://www.netlifycms.org/docs/customization/) to match your website styling or you could add [Editorial Workflows](https://www.netlifycms.org/docs/configuration-options/#publish-mode), which adds an interface for drafting, reviewing and approving posts before they go live on a website.
 
 Enjoy!
