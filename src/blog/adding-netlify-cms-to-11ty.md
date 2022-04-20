@@ -108,6 +108,7 @@ collections:
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Repository URL", name: "codeUrl", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  # Global data
   - label: "Globals"
     name: "globals"
     files:
