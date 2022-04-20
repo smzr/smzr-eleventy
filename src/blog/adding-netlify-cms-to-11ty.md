@@ -66,7 +66,7 @@ This file is YAML markdown which defines your CMS Schema. First we need to write
 ```yaml
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 ```
 
 We configured the Git Gateway previously so this should sync up fine. Next we will define the folder which images can be found in the repository and the slug we want to output the images on the domain. *media_folder is the source and public_folder is the slug*.
