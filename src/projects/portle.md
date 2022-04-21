@@ -1,7 +1,7 @@
 ---
 title: 'Portle'
 summary: 'A directory of daily puzzle games like wordle, curated by me.'
-displayOrder: 4
+displayOrder: 1
 featured: true
 image: '/images/projects/portle.png'
 imageAlt: 'Screenshot of the portle.to website'

@@ -1,7 +1,7 @@
 ---
 title: 'Identicon Generator'
 summary: 'A tool which generates random images similar to the GitHub identicons.'
-displayOrder: 1
+displayOrder: 3
 featured: true
 image: '/images/projects/identicon-generator.png'
 imageAlt: 'Screenshot of the Identicon Generator project'

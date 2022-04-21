@@ -1,7 +1,7 @@
 ---
 title: 'Game of Life'
 summary: 'A visualisation of Conway''s Game of Life built with pure javascript.'
-displayOrder: 3
+displayOrder: 4
 featured: true
 image: '/images/projects/game-of-life.png'
 imageAlt: 'Screenshot of the Game of Life project'
