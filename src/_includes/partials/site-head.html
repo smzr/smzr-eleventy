@@ -1,19 +1,18 @@
 <a class="skip-link button" href="#main-content">Skip to content</a>
 <header class="site-head" role="banner">
-    <div class="wrapper">
-      <div class="site-head__inner">
-        <a class="site-head__brand" href="/" aria-label="{{ site.name }} - home">
-          {% include "partials/smzr-logo.svg" %}
-        </a>
-        <nav class="site-head__nav" aria-label="Primary navigation">
-          <ul class="nav">
-            {% for item in navigation.items %}
-              <li>
-                <a href="{{item.url}}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{item.text}}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a class="logo" href="/" aria-label="{{ site.name }} - home">
+      <div aria-hidden="true">
+        {% include "partials/smzr-logo.svg" %}
       </div>
-    </div>
-  </header>
+      <p class="visually-hidden">Sammy McKay</p>
+    </a>
+    <ul class="nav-list">
+      {% for item in navigation.items %}
+        <li>
+          <a href="{{item.url}}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{item.text}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

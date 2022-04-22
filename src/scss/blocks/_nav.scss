@@ -1,23 +1,31 @@
-.nav {
+.primary-nav {
+  padding: 1rem 1.25rem;
+  max-width: 50em;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  @include media-query('md') {
+    flex-direction: row;
+  }
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  gap: 0 1rem;
   margin: 0;
   padding: 0;
-  @include media-query('md') {
-    gap: 1.2rem;
-  }
-  li {
-    margin: 0.25rem;
-  }
   a {
+    display: block;
     text-decoration: none;
     color: inherit;
     font-weight: 700;
     position: relative;
-    padding: .5rem 0;
+    padding: 1.5rem .5rem .5em;
     
     &[data-state='active'],
     &[aria-current='page'] {
@@ -29,7 +37,7 @@
         border-radius: 2px;
         position: absolute;
         background-color: currentColor;
-        top: -.5rem;
+        top: .5rem;
         animation: bounce 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
       }
     }
