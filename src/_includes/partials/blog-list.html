@@ -1,5 +1,5 @@
 {% for year, yearPosts in collections.postsByYear %}
-  <h2 class="blog-year">{{ year }}</h2>
+  <h3 class="blog-year">{{ year }}</h3>
   <ul class="blog-list flow">
     {% for post in yearPosts | reverse %}
     <li>
