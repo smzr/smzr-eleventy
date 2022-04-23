@@ -29,14 +29,15 @@
     
     &[data-state='active'],
     &[aria-current='page'] {
-      color: get-color('quaternary-shade');
+      color: get-color('dark');
+      text-decoration: underline 2px get-color('quaternary');
       &::before {
         content: "";
         height: 8px;
         width: 8px;
         border-radius: 2px;
         position: absolute;
-        background-color: currentColor;
+        background-color: get-color('quaternary');
         top: .5rem;
         animation: bounce 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
       }

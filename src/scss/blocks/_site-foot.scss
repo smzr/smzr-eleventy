@@ -1,3 +1,7 @@
+main + .site-foot {
+  margin-top: get-size('900');
+}
+
 .site-foot {
   border-top: 0.5rem solid currentColor;
   text-align: center;

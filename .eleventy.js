@@ -1,5 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
+const { minify } = require("terser");
 
 // Utils 
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
@@ -18,6 +19,8 @@ module.exports = config => {
 
   // Passthroughs
   config.addPassthroughCopy('src/admin/config.yml');
+  config.addPassthroughCopy('node_modules/speedlify-score/speedlify-score.css');
+  config.addPassthroughCopy('node_modules/speedlify-score/speedlify-score.js');
 
   // Plugins
   config.addPlugin(syntaxHighlight);
@@ -31,6 +34,19 @@ module.exports = config => {
   });
   config.addFilter("w3Date", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toISO();
+  });
+  config.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+  ) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      // Fail gracefully.
+      callback(null, code);
+    }
   });
 
   // Returns project items, sorted by display order
