@@ -19,8 +19,6 @@ module.exports = config => {
 
   // Passthroughs
   config.addPassthroughCopy('src/admin/config.yml');
-  config.addPassthroughCopy('node_modules/speedlify-score/speedlify-score.css');
-  config.addPassthroughCopy('node_modules/speedlify-score/speedlify-score.js');
 
   // Plugins
   config.addPlugin(syntaxHighlight);
