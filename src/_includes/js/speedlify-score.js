@@ -95,6 +95,9 @@
 				this.setAttribute("title", `Results from ${this.timeAgo(data.timestamp)}`);
 				this.setAttribute("data-timestamp", data.timestamp)
 			}
+			if(data.lighthouse.total) {
+				this.setAttribute("data-lh-total", data.lighthouse.total)
+			}
 		}
 
 		timeAgo(timestamp) {
