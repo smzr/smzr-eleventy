@@ -1,5 +1,6 @@
 ---
 title: Adding Netlify CMS to 11ty
+metaDesc: How to add Netlify CMS to your 11ty website.
 date: 2022-04-20T18:05:51.398Z
 ---
 Towards the end of 2021 I rebuilt my website using the static site generator [11ty](https://www.11ty.dev/docs/). The source files are hosted on GitHub then built and deployed using [Netlify](https://www.netlify.com/). Currently, adding content to my website means I have to create markdown files and push updates to a GitHub repository. 
