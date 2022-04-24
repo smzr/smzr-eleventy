@@ -1,9 +1,11 @@
 ---
-title: 'Yet another website rebuild - 11ty'
-date: '2021-09-12'
+title: Yet another website rebuild - 11ty
+metaDesc: Building my new site with 11ty, why I switched from Gatsby and my
+  first impression of the new stack.
+date: 2021-09-12
 ---
 
-So I decided to rebuild my website... I've stuck to the Jamstack but this time I've decided to use the static site generator Elevently. In this post I wanted to cover how I came to this descision and what my inital thoughts of 11ty are.
+So I decided to rebuild my website... I've stuck to the Jamstack but this time I've decided to use the static site generator Elevently. In this post I wanted to cover how I came to this decision and what my initial thoughts of 11ty are.
 
 ## What I was using before
 
@@ -17,7 +19,7 @@ There wasn't much content on the website, just some of my projects and the detai
 
 The Gatsby site served it's purpose for almost 2 years, in the time since launch I mainly focused on client work and subsequently I had picked up new preferences and practices for building websites. I wasn't really happy with the design of the website, the primary colour was a very saturated purple for some reason and everything was just a bit too big. I had new content I wanted to start putting out (such as posts like this) and wanted to refresh my personal branding, so I decided to go for a full rebuild.
 
-React/Gatsby are great, and I would use both again. But for my personal website which is almost entirely static I felt that React was a bit overkill and the build times were frustrating at times. I played around with Eleventy a bit and decided to give it a try.
+React/Gatsby are great, and I would use both again. But for my personal website which is almost entirely static I felt that React was a bit overkill and the build times became frustrating. I played around with Eleventy a bit and decided to give it a try.
 
 ## Eleventy / 11ty
 
@@ -25,7 +27,7 @@ Eleventy is also static site generator (like Gatsby). It's super flexible and it
 
 I configured 11ty to use Nunjucks for templating and markdown for my page content / posts. There's a few features I have sprinkled in which allow the site to load really fast:
 
-- Seperated styling between components and served minified, inline to respective pages along with site-wide styles
+- Separated styling between components and served minified, inline to respective pages along with site-wide styles
 - Used a cool trick to [asynchronously load font css](https://www.filamentgroup.com/lab/async-css.html#async-css-loading-approaches), this is why you can see the font change when loading this page
 - On top of that, I've minified the final html output
 
