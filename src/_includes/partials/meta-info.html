@@ -26,10 +26,17 @@
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
 
+{% if seoIgnore %}
+  <meta name="robots" content="noindex"/>
+{% endif %}
+
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
+<meta name="twitter:title" content="{{ pageTitle }}">
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
+<meta name="twitter:site" content="{{ site.authorTwitter }}">
+<meta name="twitter:creator" content="{{ site.authorTwitter }}">
 
 {% if socialImage %}
   <meta name="twitter:card" content="summary_large_image" />
@@ -37,6 +44,8 @@
   <meta name="twitter:image" content="{{ socialImage }}" />
   <meta property="og:image:alt" content="Page image for {{ site.name }}" />
   <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 {% endif %}
 
 {% if metaDesc %}

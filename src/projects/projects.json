@@ -1,4 +1,5 @@
 {
   "layout": "layouts/project-item.html",
+  "ignore": true,
   "permalink": "/projects/{{ title | slug }}/index.html"
 }

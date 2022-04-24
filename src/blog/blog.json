@@ -1,4 +1,6 @@
 {
   "layout": "layouts/blog-post.html",
-  "permalink": "/blog/{{ title | slug }}/index.html"
+  "permalink": "/blog/{{ title | slug }}/index.html",
+  "changefreq": "monthly",
+  "priorty": "0.7"
 }
