@@ -3,10 +3,26 @@
   <div class="wrapper">
     <div class="site-foot__inner flow">
       <div class="socials">
-        <a href="mailto:sammy@smzr.co.uk" aria-label="Email" title="Email">{% include "partials/icons/email.svg" %}</a>
-        <a href="https://github.com/smzr" aria-label="GitHub" title="GitHub">{% include "partials/icons/github.svg" %}</span></a>
-        <a href="https://codepen.io/smzr" aria-label="CodePen" title="CodePen">{% include "partials/icons/codepen.svg" %}</span></a>
-        <a href="https://www.linkedin.com/in/smzr" aria-label="LinkedIn" title="LinkedIn">{% include "partials/icons/linkedin.svg" %}</a>
+        <a href="mailto:sammy@smzr.co.uk" title="Email Sammy McKay">
+          {% include "partials/icons/email.svg" %}
+          <span class="visually-hidden">Email</span>
+        </a>
+        <a href="https://github.com/smzr" title="@smzr on GitHub">
+          {% include "partials/icons/github.svg" %}
+          <span class="visually-hidden">GitHub</span>
+        </a>
+        <a href="https://codepen.io/smzr" title="@smzr on CodePen">
+          {% include "partials/icons/codepen.svg" %}
+          <span class="visually-hidden">CodePen</span>
+        </a>
+        <a href="https://www.linkedin.com/in/smzr" title="@smzr on LinkedIn">
+          {% include "partials/icons/linkedin.svg" %}
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a href="/feed.xml" title="Sammy McKay's RSS feed">
+          {% include "partials/icons/rss-feed.svg" %}
+          <span class="visually-hidden">RSS</span>
+        </a>
       </div>
       <p>smzr © {{ helpers.currentYear() }}</p>
     </div>

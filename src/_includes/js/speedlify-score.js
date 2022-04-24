@@ -101,8 +101,8 @@
 		}
 
 		timeAgo(timestamp) {
-			let days = Math.floor((new Date() - timestamp) / (1000*60*60*24));
-			return `${days} day${days != 1 ? "s" : ""} ago`;
+			let hours = Math.floor((new Date() - timestamp) / (1000*60*60));
+			return `${hours} hour${hours != 1 ? "s" : ""} ago`;
 		}
 
 		getScoreClass(score) {
