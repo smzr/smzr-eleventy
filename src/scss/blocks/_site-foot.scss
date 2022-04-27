@@ -22,3 +22,24 @@ main + .site-foot {
     color: get-color('secondary');
   }
 }
+
+.data-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.smzr-expansion {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  i {
+    font-style: italic;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      color: get-color('quaternary-shade');
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="smzr-expansion">
+  <p>smzr stands for <i id="smzr" onclick="regenExpansion()">{{ expansions.items | random | lower }}</i></p>
+</div>
+<script>
+  function regenExpansion() {
+    fetch("/smzr-expansions.json")
+      .then(res => res.json())
+      .then(out => {
+        document.getElementById("smzr").innerHTML = out.items[Math.floor(Math.random() * out.items.length)];
+      })
+      .catch(err => {throw err});
+  }
+</script>
