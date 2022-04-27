@@ -3,23 +3,27 @@
   src: url('/css/fonts/rubik-smzr-optimised.woff2') format('woff2'),
         url('/css/fonts/rubik-smzr-optimised.woff') format('woff');
   unicode-range: U+65-90, U+97-122;
+  font-display: swap;
 }
 @font-face {
   font-family: Rubik;
   src: url('/css/fonts/rubik-regular-webfont.woff2') format('woff2'),
         url('/css/fonts/rubik-regular-webfont.woff') format('woff');
+  font-display: swap;
 }
 @font-face {
   font-family: Rubik;
   src: url('/css/fonts/rubik-bold-webfont.woff2') format('woff2'),
         url('/css/fonts/rubik-bold-webfont.woff') format('woff');
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: Rubik;
   src: url('/css/fonts/rubik-italic-webfont.woff2') format('woff2'),
         url('/css/fonts/rubik-italic-webfont.woff') format('woff');
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: Rubik;
@@ -27,6 +31,7 @@
         url('/css/fonts/rubik-bolditalic-webfont.woff') format('woff');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 body {
