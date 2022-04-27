@@ -20,6 +20,7 @@ module.exports = config => {
 
   // Passthroughs
   config.addPassthroughCopy('src/admin/config.yml');
+  config.addPassthroughCopy({ 'src/fonts/*': 'css/fonts' });
 
   // Plugins
   config.addPlugin(syntaxHighlight);

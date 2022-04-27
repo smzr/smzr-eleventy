@@ -5,8 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="/fonts/Rubik-400-latin5.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Rubik-700-latin10.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/fonts/rubik-smzr-optimised.woff2" as="font" type="font/woff2" crossorigin>
     {% include "partials/meta-info.html" %}
     {% include "partials/gtm.html" %}
     
@@ -26,8 +25,6 @@
     {% endset %}
     <style>{{ css | safe }}</style>
 
-    <link rel="preload" href="/fonts/fonts.css?{{ assetHash }}" as="style" onload="this.rel='stylesheet'" />
-
     {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
       {% for item in pageStylesheets %}
@@ -36,13 +33,13 @@
     {% endif %}
 
     {# Capture scripts #}
-    {% set js %}
-    {% include 'js/speedlify-score.js' %}
-    {% endset %}
+    {% set critical-foft-preload %}{% include 'js/critical-foft-preload.js' %}{% endset %}
+    {% set speedlify-score %}{% include 'js/speedlify-score.js' %}{% endset %}
     {# Minify inline scripts #}
-    <script>{{ js | jsmin | safe }}</script>
+    <script>{{ criticalFOFTPreload | jsmin | safe }}</script>
+    <script>{{ speedlifyScore | jsmin | safe }}</script>
   </head>
-  <body class="bg-light color-dark font-base">
+  <body class="bg-light color-dark">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND56MMR"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
