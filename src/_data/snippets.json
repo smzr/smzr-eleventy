@@ -1,9 +1,19 @@
 {
   "items": [
     {
+      "url": "https://codepen.io/smzr/pen/poLBdNe",
+      "external": true,
+      "text": "Audio player web component"
+    },
+    {
       "text": "Big Flex Menu",
       "url": "https://codepen.io/smzr/pen/mdObpZb",
       "external": true
+    },
+    {
+      "url": "https://codepen.io/smzr/pen/KKodgxo",
+      "external": true,
+      "text": "Mix blend mode test"
     },
     {
       "url": "https://codepen.io/smzr/pen/NWaLZmX",
