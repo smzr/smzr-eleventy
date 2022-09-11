@@ -1,4 +1,4 @@
-{% set urlWithOrigin %}https://www.smzr.co.uk{{ page.url }}{% endset %}
+{% set urlWithOrigin %}https://smzr.co.uk{{ page.url }}{% endset %}
 {%- if speedlify[urlWithOrigin] %}
 <a href="https://smzr-speedlify.netlify.app/smzr.co.uk/" class="speedlify-link">
   <speedlify-score hash="{{ speedlify[urlWithOrigin].hash }}" speedlify-url="https://smzr-speedlify.netlify.app/" score weight requests></speedlify-score>
