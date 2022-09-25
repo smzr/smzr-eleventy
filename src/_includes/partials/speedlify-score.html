@@ -1,5 +1,7 @@
 {% set urlWithOrigin %}https://smzr.co.uk{{ page.url }}{% endset %}
-{%- if speedlify[urlWithOrigin] %}
+{%- if page.url == "/" %}
+<speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="9d74369f" score weight rank rank-change></speedlify-score>
+{%- elif speedlify[urlWithOrigin] %}
 <a href="https://smzr-speedlify.netlify.app/smzr.co.uk/" class="speedlify-link">
   <speedlify-score hash="{{ speedlify[urlWithOrigin].hash }}" speedlify-url="https://smzr-speedlify.netlify.app/" score weight requests></speedlify-score>
   <div class="lh-pyro">
