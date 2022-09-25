@@ -102,6 +102,10 @@
 
 		timeAgo(timestamp) {
 			let hours = Math.floor((new Date() - timestamp) / (1000*60*60));
+			let days = Math.floor(hours / 24);
+			if(days > 0) {
+				return `${days} day${days != 1 ? "s" : ""} ago`;
+			}
 			return `${hours} hour${hours != 1 ? "s" : ""} ago`;
 		}
 
