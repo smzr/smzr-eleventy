@@ -1,9 +1,15 @@
 {% set urlWithOrigin %}https://smzr.co.uk{{ page.url }}{% endset %}
 {%- if page.url == "/" %}
-<speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="9d74369f" score weight rank rank-change></speedlify-score>
+<a href="https://www.11ty.dev/speedlify/smzr-co-uk/" class="speedlify-link">
+  <speedlify-score speedlify-url="https://www.11ty.dev/speedlify/" hash="{{ speedlifyLeaderboard[urlWithOrigin].hash }}" score weight rank rank-change></speedlify-score>
+  <div class="lh-pyro">
+    <div class="lh-pyro-before"></div>
+    <div class="lh-pyro-after"></div>
+  </div>
+</a>
 {%- elif speedlify[urlWithOrigin] %}
 <a href="https://smzr-speedlify.netlify.app/smzr.co.uk/" class="speedlify-link">
-  <speedlify-score hash="{{ speedlify[urlWithOrigin].hash }}" speedlify-url="https://smzr-speedlify.netlify.app/" score weight requests></speedlify-score>
+  <speedlify-score speedlify-url="https://smzr-speedlify.netlify.app/" hash="{{ speedlify[urlWithOrigin].hash }}" score weight requests></speedlify-score>
   <div class="lh-pyro">
     <div class="lh-pyro-before"></div>
     <div class="lh-pyro-after"></div>
